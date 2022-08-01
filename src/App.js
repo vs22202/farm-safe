@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect } from "react";
+import HomePage from "./Views/HomePage";
+import { requestPermission} from "./init-fcm";
+import { getMessaging, onMessage } from "firebase/messaging";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        const messaging = getMessaging();
+        onMessage(messaging, (payload) => {
+            console.log('Message received. ', payload);
+        });
+    }, [])
+    return (
+        <div className="App">
+            <HomePage />
+            <button onClick={requestPermission} >
+                Click to receive notifications
+            </button>
+        </div>
+    );
 }
-
 export default App;
