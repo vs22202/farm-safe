@@ -9,13 +9,48 @@
   <meta name="description" content="Farm Safe" />
   <link rel="apple-touch-icon" href="./logo192.png" />
   <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>React App</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+
+
+
+  <style>
+
+  #signInDiv{
+   
+    position:relative;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 18em;
+    padding-right: 1em;
+    white-space: nowrap;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    
+  }
+
+  .signout{
+    padding-left: 667px;
+    padding-top: 40px;
+    font-size: 70%;
+    height: 50%;
+    border-radius: 30%;
+    position: relative;
+    
+  }
+ 
+  </style>
+  
 </body>
 <script>
   if('serviceWorker' in navigator) {
@@ -26,5 +61,7 @@
       })
   }
 </script>
+
+ 
 
 </html>

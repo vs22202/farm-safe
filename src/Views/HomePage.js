@@ -1,3 +1,5 @@
+/*
+
 import { useState } from "react";
 import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
@@ -26,4 +28,4 @@ const HomePage = () => {
         </div>
     );
 }
-export default HomePage;
+export default HomePage; */
